@@ -42,8 +42,8 @@ bool Similarity_Explorer::match_pattern(Path path1, Path path2) {
     bool match_function1 = true, match_function2 = true;
 
     if (!pattern_to_match_path.empty()) {
-        match_path1 = path1.contains_given_pattern(pattern_to_match_path);
-        match_path2 = path2.contains_given_pattern(pattern_to_match_path);
+        match_path1 = path1.contains_given_pattern_path_only(pattern_to_match_path);
+        match_path2 = path2.contains_given_pattern_path_only(pattern_to_match_path);
     }
 
     if (!pattern_to_match_function.empty()) {
