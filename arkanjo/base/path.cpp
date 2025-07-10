@@ -1,4 +1,3 @@
-
 #include "path.hpp" 
 
 vector<string> Path::split_path(string string_path){
@@ -151,4 +150,9 @@ bool Path::operator<(const Path &path) const{
 bool Path::contains_given_pattern(string pattern){
 	string relative_path_plus_function_name = build_relative_path() + BAR + build_function_name();
 	return relative_path_plus_function_name.find(pattern) != string::npos;
+}
+
+bool Path::contains_given_pattern_path_only(string pattern){
+	string relative_path_only = build_relative_path();
+	return relative_path_only.find(pattern) != string::npos;
 }

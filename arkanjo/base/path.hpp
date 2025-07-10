@@ -139,6 +139,13 @@ class Path {
                 bool contains_given_pattern(string pattern);
 
                 /**
+                 * @brief Checks for pattern in path only (ignoring function name)
+                 * @param pattern Pattern to search for
+                 * @return bool True if pattern found in path only
+                 */
+                bool contains_given_pattern_path_only(string pattern);
+
+                /**
                  * @brief Path comparison operator
                  * @param path Other path to compare
                  * @return bool True if this path is ordered first
